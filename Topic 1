@@ -1,0 +1,73 @@
+/*What is C#?
+It is a modern, object oriented programming language developed by Microsoft as part of its .NET initiative. 
+It is primarly run on the .NET Framework, a platform that provides a large class liabrary and supports several programming languages.
+It is now being used to develop cross-platform applications that run on Windows, macOS, and Linux. 
+C# is object-oriented, which means it allow developers to define classes, create objects, and work with concepts like inheritance, ploymorphism and encapsulation.
+The syntax of C# is similar to C, C++ and Java. 
+It is also a type-safe language, the errors are caught during compile time rather than runtime. 
+C# is typically developed using Microsoft's Visual Studio, a powerful IDE that provides extensive tools for debugging, profilling and software design.
+It is one of theh most popular and enduring programming languages.
+*/
+/*What is the name space
+In C#, a namespace is a declarative region that provides a way to organize related classes, structures, interfaces, enumerations and delegates, keeping them grouped together. 
+// By using namespaces you can categorize and organize your code in a hierarchical manner. It's like a folder. 
+//Declaration: 
+namespace MyNamespace
+{
+    class
+    {
+
+    }
+}
+//Using a namespace: use the using directive at the beginning of the C# file.
+using System; //This allows you to use types from the System namespce without fully qualifying their name
+//otherwise it would be System.Console.WriteLine() instead of Console.WriteLine().
+//Name space can also be nested
+namespace Company 
+{
+    namespace Department 
+    {
+        class Employee // The full name of Employee class will be: Company.Department.Employee
+        {
+
+        }
+    }
+}
+Why do we use name space?
+1. Avoid name conflicts.
+2. Better Categorization.
+3. Easier Referencing. 
+
+Common .NET Namespaces
+System
+System.Collections.Generic
+System.IO
+*/
+/*What does {} mean in C# 
+// It is used to denote a block of code. It can be methods, loops, conditionals, properties, indexers, events and so on. 
+class MyClass
+{
+
+}
+public void MyMethod()
+{
+
+}
+for(int i=0; i<10; i++)
+{
+
+}
+if(condition)
+{
+
+}
+else
+{
+
+}
+//Above all, they are utilized to group related statement and define the scope of code blocks, helping the complier identify where a block starts and where it ends.*/
+//A class in object-oriented programming is a blueprint for creating objects. 
+
+/*Hallo Welt!
+Write to Console -> Right-click on Winforms project in Solution Explorer -> Properties ->Application -> Outputtype -> From Windows Application to Console Application. */
+Console.WriteLine("Hallo Welt")
