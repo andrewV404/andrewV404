@@ -1,0 +1,43 @@
+Work with string
+//\n: new line
+MessageBox.Show("Hello\nWorld");
+//\t: new tab
+MessageBox.Show("Hello\tWorld");
+We also use the \ for put a quotation mark in a string.
+MessageBox.Show("Hello\"World");
+
+C# String Method
+1. Concat
+string phrase = "Csharp kurs" + " is einfach";
+string phrase = string.Concat("Csharp kurs", " is einfach");
+2. Substring
+string phrase = "Csharp Kurs";
+phaseSub = phase.Substring(startIndex)
+phaseSub2 = phase.Substring (startIndex, length);
+3. Searching and Indexing
+phrase.IndexOf("K"); is equal to phrase.IndexOf("Kurs");
+phrase.IndexOf("o"); // The output is -1.
+phrase.LastIndexOf(substring);
+4. Replacing 
+phrase.Replace(oldValue, newValue);
+5. Case Conversion
+phrase.ToUpper();
+phrase.ToLower();
+6. Character Access;
+phrase[0];
+7. Comparing Strings:
+string.Equals(otherString); //True, or false
+string.Compare(str1, str2); //-1, 0
+8. Starts With, Ends With, Contains
+phrase.StartsWith(prefix);
+phrase.EndsWith(prefix);
+phrase.Contains("sharp"); //The result is either true or false.
+9. Trim();
+Exercise:
+string exercise = "CSharp";
+string answer1 = //a substring, starting from the left and length is 3.
+string answer2 = // a substring, starting from the right and the length is 3.
+string answer3 = // a substring, and the middle 3. 
+
+
+
