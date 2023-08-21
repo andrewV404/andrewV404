@@ -1,0 +1,167 @@
+/*What is C#?
+It is a modern, object oriented programming language developed by Microsoft as part of its .NET initiative. 
+It is primarly run on the .NET Framework, a platform that provides a large class liabrary and supports several programming languages.
+It is now being used to develop cross-platform applications that run on Windows, macOS, and Linux. 
+C# is object-oriented, which means it allow developers to define classes, create objects, and work with concepts like inheritance, ploymorphism and encapsulation.
+The syntax of C# is similar to C, C++ and Java. 
+It is also a type-safe language, the errors are caught during compile time rather than runtime. 
+C# is typically developed using Microsoft's Visual Studio, a powerful IDE that provides extensive tools for debugging, profilling and software design.
+It is one of theh most popular and enduring programming languages.
+*/
+/*What is the name space
+In C#, a namespace is a declarative region that provides a way to organize related classes, structures, interfaces, enumerations and delegates, keeping them grouped together. 
+// By using namespaces you can categorize and organize your code in a hierarchical manner. It's like a folder. 
+//Declaration: 
+namespace MyNamespace
+{
+    class
+    {
+
+    }
+}
+//Using a namespace: use the using directive at the beginning of the C# file.
+using System; //This allows you to use types from the System namespce without fully qualifying their name
+//otherwise it would be System.Console.WriteLine() instead of Console.WriteLine().
+//Name space can also be nested
+namespace Company 
+{
+    namespace Department 
+    {
+        class Employee // The full name of Employee class will be: Company.Department.Employee
+        {
+
+        }
+    }
+}
+Why do we use namespace?
+1. Avoid name conflicts.
+2. Better Categorization.
+3. Easier Referencing. 
+
+Common .NET Namespaces
+System
+System.Collections.Generic
+System.IO
+*/
+/*What does {} mean in C# 
+// It is used to denote a block of code. It can be methods, loops, conditionals, properties, indexers, events and so on. 
+class MyClass
+{
+
+}
+public void MyMethod()
+{
+
+}
+for(int i=0; i<10; i++)
+{
+
+}
+if(condition)
+{
+
+}
+else
+{
+
+}
+//Above all, they are utilized to group related statement and define the scope of code blocks, helping the complier identify where a block starts and where it ends.*/
+//A class in object-oriented programming is a blueprint for creating objects. 
+//A method is a block of codes that is reuseable. 
+
+/*Hallo Welt!
+Wir können ein Messagebox oder ein label benutzen für Output. 
+Message Box -> MessageBox.Show("Hallo Welt!");
+label -> lblMessage.Text("Hallo Welt");
+We need a ";" to mark the end of the command. 
+*/
+
+Then we should talk about Variables. 
+First thing is different value types.
+//1. Interal Types
+byte a = 254; // 0 to 255, 8 bits
+sbyte b = -127; // -128 to 127 8 bits
+short c = 32,767; //-32768 to 32767 16 bits
+ushort d = 65535; // 0 to 65535 (65535 = 32767 + 32768)
+int e = 2147483647; //-2,147,483,648 to 2,147,483,647 32 bits
+uint f = 4294967295; // The sum of the upper and lower bound of int
+long g = 9223372036854775807; //-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 64 bits
+ulong h = 18446744073709551615; // 0 to 18,446,744,073,709,551,615 
+//use lower bits types will save memoryusage. 
+//bit here stands for binary digits. The smallest unit of data can have only one of two values: 0 and 1; bits are the building blocks of all digital data and information in computers.
+//if we only have 1 bit, it's either 0 or 1, it can only have two values. but if we now have 2 bits, how many different combinations does it hvae, 2*2 = 4, and so on. 
+//2. Floating-point Types
+float i = 3_000.5F; //7 digits of precision
+double j = 3_000.5D; // 15-16 digits of precision
+//3. Decimal Type
+decimal: k = 3_000.5m; // 28-29 digits of precision
+//4. Character Type
+char l = 'c'; 
+//5. Boolean Type
+bool m = true; // or false
+//6. String Type
+string n = "Hello World";
+//Don't need to worry about it, we can always check the range in the form.
+lblMessage.Text = $"{int.MinValue} to {int.MaxValue}";
+
+As we showed before, the way we declare a variable is:
+datatyp name = value;
+Now we should talk about name convention: When we name a variable, we want it to be readable and maintainable. 
+1. Camel Case: For most variables, use camel case, which starts with a lowercase letter and then capitalizes the first letter of subsequent words within the variable name. Used for local variables, parameters, and private fields.
+int itemCount;
+string customName;
+double totalAmount;
+2. Pascal Case: For class names, struct names, enum names, method names, properties and public/protected fields, use PascalCase. Which means each first letter of each word is capitalised.
+class Employe
+{
+    public string FullName {get; set;}
+    public void CalculateSalary()
+    {
+        
+    }
+}
+3. Underscores: Avoid using underscores to seperate words in variable names, except for fields (private or protected) that represent data used within a class or struct. 
+private int _employeeId;
+protected string _departmentName;
+4. Abbreviations: Use consistent capitalization for abbreviations.
+For example, use customerId, instead of customerID; and use xmlDocument instead of XMLDocument.
+5. Acronyms: Treat acronyms as words. For example, use 'htmlString' instead of 'HTMLString'
+6. Booleans: Name boolean variables with meaningful names that indicate their purpose. Use prefixes like "is", "has", "should", etc.
+7. Use uppercase letters and underscores for constants. 
+const double PI = 3.14159;
+const int MAX_ITEMS = 100;
+8. Prioritize readability and clarity over brevity. Choose descriptive names that convey the purpose of the variable. 
+9. Variable names must begin with an alphabetical letter or an underscore, not a number. 
+10. It can not be a C# keyword. 
+11. Variable names shouldn't include the data type of the variable. 
+12. Once the data type has been defined, it can no longer be changed.
+13. The variable can be declared outside of the method but inside of the class. Everything side the class is available in every method, but what inside the method is only acceptable for this specific method. 
+
+And we need some rules for Winform name conventino as well:
+1. Form Names:
+Use descriptive names that reflect the purpose of the form.
+Use PascalCase
+Append Form to the end of the form's class anme
+2. Control Names
+Descriptive, camelCase for control names. 
+Prefix control names with a type abbreviation to indicate the control type.
+Avoid generic names like Label1, Button2 etc. 
+Examples: txtName (TextBox), btnSave (Button), lblStatus (Label), cbCategory (ComboBox)
+3. Event Handlers:
+Use a naming pattern that includes the name of the control followed by the name of the event. 
+Examples: btnSave_Click, txtUsername_TextChanged, cbCategory_SelectedIndexChanged
+4. Priavte Fields:
+Use camelCase with an underscore prefix for private fields. 
+Prefix private field names with m_ or an underscore to indicate they are fields
+Examples: _customerName, m_isLoggedIn
+5. Properties
+Use PascalCase for property names, using clear and descriptive names.
+Examples: Text, Value, SelectedIndex
+6. Enums
+Use PascalCase for enum type names and enum values.
+Examples: FormState.Active, UserRole.Admin
+7. Namespaces: Use a meaningful namespace structure that reflects the organization of the application. 
+Use PascalCase for namespace names
+Example: YourApplicationName.Forms, YourApplicationName.Models
+
+
