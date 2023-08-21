@@ -33,7 +33,7 @@ namespace Company
         }
     }
 }
-Why do we use name space?
+Why do we use namespace?
 1. Avoid name conflicts.
 2. Better Categorization.
 3. Easier Referencing. 
@@ -69,5 +69,6 @@ else
 //A class in object-oriented programming is a blueprint for creating objects. 
 
 /*Hallo Welt!
-Write to Console -> Right-click on Winforms project in Solution Explorer -> Properties ->Application -> Outputtype -> From Windows Application to Console Application. */
-Console.WriteLine("Hallo Welt")
+Wir können ein Messagebox oder ein label benutzen für Output. 
+Message Box -> MessageBox.Show("Hallo Welt!")
+label -> lblMessage.Text("Hallo Welt")
