@@ -163,5 +163,10 @@ Examples: FormState.Active, UserRole.Admin
 7. Namespaces: Use a meaningful namespace structure that reflects the organization of the application. 
 Use PascalCase for namespace names
 Example: YourApplicationName.Forms, YourApplicationName.Models
+Exercise: 
+Very simple. Instead of Hello World, I want everybody to developed 3 strings
+string Vorname, string Nachname, int age
+Hallo, mein Name ist Andrew Chen und ich bin 24 Jahre alt. 
+Then let's take a step further, what if I want to get the info first and then output it to a sentence. We need text box for this. 
 
 
